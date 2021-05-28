@@ -12,9 +12,9 @@ function App() {
   const [ search, setSearch] = useState('');
   const [ query, setQuery ] = useState('chicken')
   
-  // useEffect(() => {
-  //   getRecipes()
-  // },[])  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    getRecipes()
+  },[query])  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const getRecipes = async (e) => {
     e.preventDefault();
@@ -34,10 +34,18 @@ function App() {
     console.log(e.target.value)
   }
 
+  const getSearch = e =>{
+    e.preventDefault();
+    setQuery(search)
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
-        <Header getRecipes={getRecipes} onChange={updateSearch}/>
+        <Header 
+          getSearch={getSearch} 
+          onChange={updateSearch}
+        />
         {recipes.map((recipe) => (
           <Recipe
             key={Date.now()}

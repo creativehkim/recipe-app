@@ -1,9 +1,9 @@
 import React from 'react'
 import './Form.css'
 
-const Form = ({ getRecipes, onChange}) => {
+const Form = ({ getSearch, onChange }) => {
   return (
-    <form className='form' onSubmit={getRecipes}>
+    <form className='form' onSubmit={getSearch}>
       <input 
         type="text" 
         className='form-input'

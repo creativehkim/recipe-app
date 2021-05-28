@@ -1,0 +1,14 @@
+.header {
+  background-color: #EEE8A9;
+  color: #00886B;
+  margin: 0;
+  height: 300px;
+  padding: 4rem 0;
+}
+
+.title {
+  font-family: 'Pattaya', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+

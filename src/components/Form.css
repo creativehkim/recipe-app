@@ -1,0 +1,20 @@
+.form {
+  margin: 1rem;
+}
+
+.form-input {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 2px solid #6FD594;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  margin-left: 0.5rem;
+  background-color: #6FD594;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+} 

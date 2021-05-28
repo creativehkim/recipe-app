@@ -1,10 +1,15 @@
 import React from 'react'
+import './Form.css'
 
-const Form = (props) => {
+const Form = ({ getRecipes, onChange}) => {
   return (
-    <form onSubmit={props.getRecipes}>
-      <input type="text" name='recipeName' />
-      <button>Search</button>
+    <form className='form' onSubmit={getRecipes}>
+      <input 
+        type="text" 
+        className='form-input'
+        name='recipeName' 
+        onChange={onChange}/>
+      <button className='btn'>Search</button>
     </form>
   )
 }

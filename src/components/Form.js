@@ -10,7 +10,6 @@ const Form = ({ getSearch, onChange }) => {
           className='form-input'
           name='recipeName' 
           onChange={onChange}/>
-          
         <button className='btn'><i class="fas fa-search"></i></button>
       </div>  
     </form>

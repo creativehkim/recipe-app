@@ -8,14 +8,13 @@
 }
 
 .form-input {
-  padding: 0.8em;
+  padding: 0.5em;
   background-color: #fff;
   border: none;
   width: 300px;
   font-size: 1.25rem;
   font-family: inherit;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  border-radius: 50px;
 }
 
 .form-input:focus {
@@ -23,20 +22,20 @@
 }
 
 .input-wrapper .btn {
-  padding: 0.8em;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
   border: none;
-  color: #F56B14;
-  background-color: #FBE3DE;
+  color: #dddbdb;
+  background-color: transparent;
   font-size: 1.25rem;
   font-family: inherit;
   user-select: none;
   transition: all 0.2s ease;
+  position: absolute;
+  padding-right: 1rem;
+  top: 13px;
+  right: 30px;
 } 
 
-.input-wrapper .btn:active i {
-  transform: scale(0.8);
-  transition: all 0.2s ease;
+.input-wrapper .btn:active {
+  transform: scale(0.9);
 }
 

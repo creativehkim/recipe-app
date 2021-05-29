@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Route, Router, Switch}
 import Header from './components/Header';
 import './App.css'
 import RecipeSlider from './components/RecipeSlider';
-
-
 
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
 
   const getRecipes = async () => {
 
-    const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`);
+    const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`);
     const data = await res.json();
 
     setRecipes(data.hits)
@@ -29,12 +28,12 @@ function App() {
 
   const updateSearch = e => {
     setSearch(e.target.value)
-    console.log(e.target.value)
   }
 
   const getSearch = e =>{
     e.preventDefault();
     setQuery(search)
+    setSearch('')
   }
 
   return (
@@ -43,6 +42,7 @@ function App() {
         <Header 
           getSearch={getSearch} 
           onChange={updateSearch}
+          search={search}
         />
         <RecipeSlider recipes={recipes} />
       </div>

@@ -1,7 +1,7 @@
 .recipe-container {
   display: flex;
   flex-direction: column;
-  background-color: #FBE3DE;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   max-width: 300px;

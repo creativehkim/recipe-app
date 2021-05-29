@@ -1,8 +1,12 @@
 .swiper-container {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
-  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  min-height: 50%;
 }

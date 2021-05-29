@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Recipe from './components/Recipe';
-import './App.css'
 import Header from './components/Header';
+import './App.css'
+import RecipeSlider from './components/RecipeSlider';
+
+
 
 
 function App() {
@@ -42,16 +45,7 @@ function App() {
           getSearch={getSearch} 
           onChange={updateSearch}
         />
-        {recipes.map((recipe) => (
-          <Recipe
-            key={Date.now()}
-            title={recipe.recipe.label}
-            img={recipe.recipe.image}
-            calories={recipe.recipe.calories.toFixed(2)}
-            healthLabels={recipe.recipe.healthLabels}
-            cuisineType={recipe.recipe.cuisineType}
-          />
-        ))}
+        <RecipeSlider recipes={recipes} />
       </div>
     </div>
   );

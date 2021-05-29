@@ -3,19 +3,39 @@
   
 }
 
-.form-input {
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  border: 2px solid #6FD594;
+.input-wrapper {
+  position: relative;
 }
 
-.btn {
-  padding: 1rem 2rem;
-  border-radius: 50px;
+.form-input {
+  padding: 1em;
+  background-color: #FBE3DE;
   border: none;
-  margin-left: 0.5rem;
-  background-color: #6FD594;
-  color: #fff;
+  width: 300px;
   font-size: 1rem;
   font-family: inherit;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.input-wrapper .btn {
+  padding: 1em;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: none;
+  color: #F56B14;
+  font-size: 1rem;
+  font-family: inherit;
+  user-select: none;
+  transition: all 0.2s ease;
 } 
+
+.input-wrapper .btn:active {
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+}
+

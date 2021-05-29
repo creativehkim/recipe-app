@@ -16,17 +16,13 @@ function App() {
     getRecipes()
   },[query])  // eslint-disable-next-line react-hooks/exhaustive-deps
 
-  const getRecipes = async (e) => {
-    e.preventDefault();
-    
-        const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`;
-    
+  const getRecipes = async () => {
 
-    const res = await fetch(URL);
+    const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`);
     const data = await res.json();
 
-    console.log(data.hits);
     setRecipes(data.hits)
+    console.log(data.hits)
   }
 
   const updateSearch = e => {
@@ -52,6 +48,8 @@ function App() {
             title={recipe.recipe.label}
             img={recipe.recipe.image}
             calories={recipe.recipe.calories.toFixed(2)}
+            healthLabels={recipe.recipe.healthLabels}
+            cuisineType={recipe.recipe.cuisineType}
           />
         ))}
       </div>

@@ -1,13 +1,14 @@
 .header {
-  background-color: #EEE8A9;
-  color: #00886B;
+  background-color: #AA6C60;
+  color: #FBE3DE;
   margin: 0;
   height: 250px;
   padding: 4rem 0 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header-title {
-  font-family: 'Pattaya', sans-serif;
+  font-family: 'Unna', serif;
   font-size: 3rem;
   margin: 0;
 }

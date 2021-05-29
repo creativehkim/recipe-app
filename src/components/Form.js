@@ -4,12 +4,15 @@ import './Form.css'
 const Form = ({ getSearch, onChange }) => {
   return (
     <form className='form' onSubmit={getSearch}>
-      <input 
-        type="text" 
-        className='form-input'
-        name='recipeName' 
-        onChange={onChange}/>
-      <button className='btn'>Search</button>
+      <div className="input-wrapper">
+        <input 
+          type="text" 
+          className='form-input'
+          name='recipeName' 
+          onChange={onChange}/>
+          
+        <button className='btn'><i class="fas fa-search"></i></button>
+      </div>  
     </form>
   )
 }

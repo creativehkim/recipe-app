@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Recipe from './components/Recipe';
 import Header from './components/Header';
 import './App.css'
 import RecipeSlider from './components/RecipeSlider';

@@ -1,19 +1,26 @@
 .recipe-container {
   display: flex;
+  flex-direction: column;
   background-color: #FBE3DE;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  max-width: 300px;
+  min-height: 50%;
   overflow: hidden;
   margin: 4rem auto;
 }
 
-.recipe-container img {
-  width: 300px; 
+.recipe-image-wrapper {
+  object-fit: cover;
+  height: 200px;
+}
+
+.recipe-image img {
+  width: 100%;
 }
 
 .recipe-desc {
-  padding: 3rem;
+  padding: 1.5rem 2rem;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -25,13 +32,30 @@
   color: #F56B14;
 }
 
+.text-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .recipe-type {
-  margin-left: 10px;
   text-transform: capitalize;
 }
 
+.recipe-type strong {
+  margin-left: 10px;
+}
+
+.like-btn {
+  cursor: pointer;
+}
+
+.like-btn:active {
+  transform: scale(0.9);
+}
+
 .recipe-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0.5rem 0;
 }
 
@@ -43,15 +67,18 @@
   font-weight: bold;
   background-color: #fff;
   color: #F56B14;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   transition: all 0.4s ease;
   position: relative;
   margin-left: auto;
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
 .more-btn i {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 40px;
 }
 
 .more-btn:hover {
@@ -61,18 +88,25 @@
   -moz-transition: all 0.4s ease;
   -ms-transition:all 0.4s ease;
   transition: all 0.4s ease;
-  width: 200px;
+  width: 100%;
 }
 
+.more-btn:active {
+  transform: scale(0.95);
+  background-color: #f79355;
+  transition: all 0.2s ease;
+}
 
 .more-btn:hover::after {
   content: 'View Recipe';
   position: absolute;
   font-family: inherit;
+  font-size: 1rem;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 1;
 }

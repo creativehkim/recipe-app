@@ -1,4 +1,4 @@
-# Recipe Search React App
+# Recipe Genie - Recipe Search React App
 
 This is a recipe search app using React and Edamam Recipe Database API. 
 

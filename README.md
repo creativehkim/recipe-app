@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](src\assets\screencapture.png)
 
 ### Links
 
 - Solution URL: [click here](https://github.com/creativehkim/recipe-app)
-- Live Site URL: [click here](https://your-live-site-url.com)
+- Live Site URL: [click here](https://recipe-app-creativehkim.vercel.app/)
 
 ## My process
 

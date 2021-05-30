@@ -1,12 +1,9 @@
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  min-height: 50%;
+.recipe-slider-container {
+  display: flex;
+  max-width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  overflow-x: hidden;
+  margin: 0 auto;
 }

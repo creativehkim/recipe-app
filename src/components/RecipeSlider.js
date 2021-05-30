@@ -1,32 +1,13 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
-import "swiper/components/effect-coverflow/effect-coverflow.min.css"
-import "swiper/components/pagination/pagination.min.css"
 import Recipe from './Recipe';
 import './RecipeSlider.css'
 
-import SwiperCore, {
-  EffectCoverflow,Pagination
-} from 'swiper/core';
-
-SwiperCore.use([EffectCoverflow,Pagination]);
-
 const RecipeSlider = ({ recipes }) => {
   return (
-    <div>
-    <Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} slidesPerView={'auto'} coverflowEffect={{
-      "rotate": 50,
-      "stretch": 0,
-      "depth": 100,
-      "modifier": 1,
-      "slideShadows": true
-    }} pagination={true} className="mySwiper">
-  
+    <div className='recipe-slider-container'>  
     {recipes.map((recipe) => (
-      <SwiperSlide key={Date.now() + 1}>
         <Recipe 
-          key={Date.now()}
+          key={Math.random(Date.now())}
           title={recipe.recipe.label}
           img={recipe.recipe.image}
           calories={recipe.recipe.calories.toFixed(2)}
@@ -34,10 +15,7 @@ const RecipeSlider = ({ recipes }) => {
           cuisineType={recipe.recipe.cuisineType}
           url={recipe.recipe.url}
         />
-      </SwiperSlide>
-    ))} 
-  
-</Swiper>
+    ))}
     </div>
   )
 }

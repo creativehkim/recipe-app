@@ -4,13 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
   font-family: 'Jost', sans-serif;
-  height: 100vh;
+  height: auto;
   width: 100vw;
+  background-color: #fff;
 }
 
 h1 {

@@ -12,10 +12,18 @@ function App() {
   const [ recipes, setRecipes ] = useState([]);
   const [ search, setSearch] = useState('');
   const [ query, setQuery ] = useState('chicken')
+  const [ favorites, setFavorites] = useState([])
   
   useEffect(() => {
     getRecipes()
   },[query])  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+
+  const addFavoriteRecipe = (recipe) => {
+    const newFavoriteList = [...favorites, recipe]
+    setFavorites(newFavoriteList)
+    console.log('added')
+  }
 
   const getRecipes = async () => {
 
@@ -44,7 +52,7 @@ function App() {
           onChange={updateSearch}
           search={search}
         />
-        <RecipeSlider recipes={recipes} />
+        <RecipeSlider recipes={recipes} onClick={addFavoriteRecipe}/>
       </div>
     </div>
   );

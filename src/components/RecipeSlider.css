@@ -3,7 +3,13 @@
   max-width: 90%;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
   overflow-x: hidden;
-  margin: 0 auto;
+  margin: 4rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .recipe-slider-container {
+    margin: 5rem auto;
+    padding: 2rem;
+  }
 }

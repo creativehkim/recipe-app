@@ -10,8 +10,8 @@ function App() {
   const APP_KEY ='22221fa23365c87c11bac2f90fc47188';
     
   const [ recipes, setRecipes ] = useState([]);
-  const [ search, setSearch] = useState('');
-  const [ query, setQuery ] = useState('chicken')
+  const [ search, setSearch ] = useState('');
+  const [ query, setQuery ] = useState('')
   const [ favorites, setFavorites] = useState([])
   
   useEffect(() => {
@@ -53,7 +53,7 @@ function App() {
           onChange={updateSearch}
           search={search}
         />
-        <RecipeSlider recipes={recipes} onClick={addFavoriteRecipe}/>
+        <RecipeSlider recipes={recipes} addFavoriteRecipe={addFavoriteRecipe}/>
       </div>
     </div>
   );

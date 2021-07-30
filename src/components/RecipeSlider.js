@@ -2,7 +2,7 @@ import React from 'react'
 import Recipe from './Recipe';
 import './RecipeSlider.css'
 
-const RecipeSlider = ({ recipes }) => {
+const RecipeSlider = ({ recipes, addFavoriteRecipe }) => {
   return (
     <div className='recipe-slider-container'>  
     {recipes.map((recipe) => (
@@ -14,6 +14,7 @@ const RecipeSlider = ({ recipes }) => {
           healthLabels={recipe.recipe.healthLabels}
           cuisineType={recipe.recipe.cuisineType}
           url={recipe.recipe.url}
+          handleClick={addFavoriteRecipe}
         />
     ))}
     </div>
